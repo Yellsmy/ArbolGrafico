@@ -174,7 +174,7 @@ public class ArbolExpresionGrafico extends JPanel
       //x: será el resultado de la resta entre el centro(valor guardado en la variable center) menos la mitad del ancho menos 3
       //y: será el int con el tope
       //width: será el resultado de la suma entre el ancho más 6
-      //height: será la altura del texto    
+      //height: será la altura del texto en pixeles
       posicionNodos.put(n,new Rectangle(center - width/2 - 3, top, width + 6, fm.getHeight()));
       
       //proceso de dibujo recursivo 
@@ -209,11 +209,19 @@ public class ArbolExpresionGrafico extends JPanel
      //y: resultado de la suma entre la posición en y que fue almacenada en posicionNodos más la altura del FontMetrics
      g.drawString(n.getDato()+"", r.x + 3, r.y + altura);
    
-     //
+     //si desde donde se va a dibujar la línea hasta el siguiente hijo es diferente al valor mayor
+     
      if (puntox != Integer.MAX_VALUE)
-       
+      
+     //se dibujará una linea desde las cordenadas (x,y) hasta la segunda cordenada (x2,y2)
+     //x: posición x que se pasa como parámetro
+     //y: posición y que se pasa como parámetro
+     //x2: resultado de la suma entre la posición x que fue almacenada en posicionNodos más la mitad del ancho del valor
+     //y2: posición en y que fue almacenada en posicionNodos
      g.drawLine(puntox, puntoy, (int)(r.x + r.width/2), r.y);
      
+     
+     //Proceso recursivo para dibujar el árbol por el lado izquierdo y derecho
      dibujarArbol(g, n.getIzq(), (int)(r.x + r.width/2), r.y + r.height, altura);
      dibujarArbol(g, n.getDer(), (int)(r.x + r.width/2), r.y + r.height, altura);
      
@@ -227,17 +235,29 @@ public class ArbolExpresionGrafico extends JPanel
    {
        //Pinta el recipiente reenviando la pintura a cualquier componente ligero que sea hijo de este contenedor
          super.paint(g);
-         //definicion de un objeto de métricas de fuente
+         //obtenemos las características de la fuente
          fm = g.getFontMetrics();
 
+         //si dirty es true quiere decir que no se han calculado las posiciones,
+         //por lo que se llama al método calcularPosiciones() y dirty se convierte en false
          if (dirty) 
          {
            calcularPosiciones();
            dirty = false;
          }
          
+         //Variable de tipo Graphics2D que almacenará el objeto que se pasará como parámetro
          Graphics2D g2d = (Graphics2D) g;
+         
+         //
          g2d.translate(getWidth() / 2, parent2child);
+         
+         //Se llama al método para dibujar el árbol
+         //g2d: variable declarada anteriormente
+         //la raíz del árbol
+         //El valor máximo que se ha guardado en cualquier variable entera
+         //fm.getLeading: la distancia de la el borde superior y el el punto alto del número
+         //fm.getAscent: El espacio que ocupa el número sin bordes superiores o inferiores
          dibujarArbol(g2d, this.miArbol.getRaiz(), Integer.MAX_VALUE, Integer.MAX_VALUE, 
                   fm.getLeading() + fm.getAscent());
          fm = null;
