@@ -75,7 +75,6 @@ public class ArbolExpresionGrafico extends JPanel
      * referencia calcular el tamaño de cada subárbol.
      * retorno de Dimension con el tamaño de cada subárbol.
      */
-    //El método retornará un objeto dimensión que es una clase de la librería awt
     private Dimension calcularTamañoSubarbol(Nodo n) 
     {     //Si el árbol está vacío retornará dimensiones altura y ancho 0 porque quiere decir que no
          //existe un árbol
@@ -89,13 +88,11 @@ public class ArbolExpresionGrafico extends JPanel
           
           //Creamos variable que sumará los datos:
           //fm.getHeight() nos ayudará a obtener la altura del texto, en este caso, del número
-          //parent2child ni idea XD
           //saca la altura máxima del lado izquierdo y derecho que se guardó en ld y rd anteriormente         
           int h = fm.getHeight() + parent2child + Math.max(ld.height, rd.height);
           
           //Creamos variable que sumará los datos:
           //El ancho de los datos izquierdos que fue guardado en ld anteriormente
-          //child2child ni idea x2
           //El ancho de los datos derecho que fue guardado en rd anteriormente
           int w = ld.width + child2child + rd.width;
           
