@@ -10,59 +10,59 @@ import javax.swing.JPanel;
 //Instancia de metodos del ARBOL.java 
 public class Simulador {
     //declaramos una variable arbol que nos da acceso a los metodos 
-    Arbol miArbol = new Arbol();
+    Arbol arbolBinario = new Arbol();
 
-    public boolean insertar(Integer dato) {
-        //mediante la variable miArbol accedemos al metodo agregar
-        //retornamos true de la funcion agregar despues de ejecutar 
-        //la funcion recursiva insertar para que la interfaz 
+    public boolean insertarDato(Integer dato) {
+        //mediante la variable arbolBinario accedemos al metodo agregarDato
+        //retornamos true de la funcion agregarDato despues de ejecutar 
+        //la funcion recursiva insertarDato para que la interfaz 
         //ejecute complementos y repinte el entorno grafico 
-        return (this.miArbol.agregar(dato));// return true 
+        return (this.arbolBinario.agregarDato(dato));// return true 
     }
 
     //metodo recibe un entero el cual se borrara 
     public String borrar(Integer dato) {
-        //mediante la variable miArbol accedemos al metodo borrar
-        Integer x = this.miArbol.borrar(dato);
+        //mediante la variable arbolBinario accedemos al metodo borrar
+        Integer x = this.arbolBinario.borrar(dato);
         if (x == null) {
             return ("No existe el dato en el arbol");
         }
         return ("Borrado el dato: " + x.toString());
     }
 
-    public String preOrden() {
-        //mediante la variable miArbol accedemos al metodo preOrden
-        ArrayList it = this.miArbol.preOrden();
-        return (recorrido(it, "Recorrido PreOrden"));
+    public String recorridoPreOrden() {
+        //mediante la variable arbolBinario accedemos al metodo recorridoPreOrden
+        ArrayList it = this.arbolBinario.recorridoPreOrden();
+        return (recorrido(it, "Recorrido recorridoPreOrden"));
     }
 
-    public String inOrden() {
-        //mediante la variable miArbol accedemos al metodo inOrden
-        ArrayList it = this.miArbol.inOrden();
-        return (recorrido(it, "Recorrido InOrden"));
+    public String recorridoInOrden() {
+        //mediante la variable arbolBinario accedemos al metodo recorridoInOrden
+        ArrayList it = this.arbolBinario.recorridoInOrden();
+        return (recorrido(it, "Recorrido recorridoInOrden"));
     }
 
-    public String posOrden() {
-        //mediante la variable miArbol accedemos al metodo postOrden
-        ArrayList it = this.miArbol.postOrden();
-        return (recorrido(it, "Recorrido PosOrden"));
+    public String recorridoPostOrden() {
+        //mediante la variable arbolBinario accedemos al metodo postOrden
+        ArrayList it = this.arbolBinario.postOrden();
+        return (recorrido(it, "Recorrido recorridoPostOrden"));
     }
 
     public String imprimirPorNiveles() {
-        //mediante la variable miArbol accedemos al metodo impNiveles 
-        ArrayList it = this.miArbol.impNiveles();
+        //mediante la variable arbolBinario accedemos al metodo impNiveles 
+        ArrayList it = this.arbolBinario.impNiveles();
         return (recorrido(it, "Imprimir Por niveles"));
     }
 
     public String darHojas() {
-        //mediante la variable miArbol accedemos al metodo getHojas
-        ArrayList it = this.miArbol.getHojas();
+        //mediante la variable arbolBinario accedemos al metodo getHojas
+        ArrayList it = this.arbolBinario.getHojas();
         return (recorrido(it, "Hojas del Arbol"));
     }
 
     public String esta(Integer dato) {
-        //mediante la variable miArbol accedemos al metodo buscar
-        boolean siEsta = this.miArbol.buscar(dato);
+        //mediante la variable arbolBinario accedemos al metodo buscarDato
+        boolean siEsta = this.arbolBinario.buscarDato(dato);
         String r = "El dato: " + dato.toString() + "\n";
         r += siEsta ? "Si se encuentra en el arbol" : "No se encuentra en el arbol";
         return (r);
@@ -80,25 +80,25 @@ public class Simulador {
         return (r);
     }
     public String porNivel(){
-        //mediante la variable miArbol accedemos al metodo alturaArbol 
-        this.miArbol.alturaArbol();
-        //mediante la variable miArbol accedemos al metodo imprimirNivel 
-        ArrayList it = this.miArbol.imprimirNivel();
+        //mediante la variable arbolBinario accedemos al metodo alturaArbol 
+        this.arbolBinario.alturaArbol();
+        //mediante la variable arbolBinario accedemos al metodo imprimirNivel 
+        ArrayList it = this.arbolBinario.imprimirNivel();
         return (recorrido(it, "Niveles en Orden"));
     }
     
     public String CantidadNodos(){
-        //mediante la variable miArbol accedemos al metodo cantidadNodos 
-        return this.miArbol.cantidadNodos();
+        //mediante la variable arbolBinario accedemos al metodo cantidadNodos 
+        return this.arbolBinario.cantidadNodos();
     }
     
     public String CantidadHojas(){
-        //mediante la variable miArbol accedemos al metodo cantidadNodosHoja
-        return this.miArbol.cantidadNodosHoja();
+        //mediante la variable arbolBinario accedemos al metodo cantidadNodosHoja
+        return this.arbolBinario.cantidadNodosHoja();
     }
    
     public JPanel getDibujo() {
-        //mediante la variable miArbol accedemos al metodo getdibujo
-        return this.miArbol.getdibujo();
+        //mediante la variable arbolBinario accedemos al metodo getdibujo
+        return this.arbolBinario.getdibujo();
     }
 }

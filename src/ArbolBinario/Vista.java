@@ -37,17 +37,17 @@ public class Vista extends javax.swing.JFrame {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jInternalFrame2 = new javax.swing.JInternalFrame();
-        botonInsertar = new javax.swing.JButton();
+        botoninsertarDato = new javax.swing.JButton();
         txtdato = new javax.swing.JTextField();
         cmdDarHojas = new javax.swing.JButton();
-        cmdBuscar = new javax.swing.JButton();
+        cmdbuscarDato = new javax.swing.JButton();
         botonBorrar = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         impresion = new javax.swing.JTextArea();
-        btnInOrden = new javax.swing.JButton();
-        btnPreOrden = new javax.swing.JButton();
-        btnPosOrden = new javax.swing.JButton();
+        btnrecorridoInOrden = new javax.swing.JButton();
+        btnrecorridoPreOrden = new javax.swing.JButton();
+        btnrecorridoPostOrden = new javax.swing.JButton();
         btnNiveles = new javax.swing.JButton();
         btnsalir = new javax.swing.JButton();
 
@@ -75,10 +75,10 @@ public class Vista extends javax.swing.JFrame {
         jDesktopPane1.add(jInternalFrame2);
         jInternalFrame2.setBounds(0, 0, 520, 360);
 
-        botonInsertar.setText("Insertar");
-        botonInsertar.addActionListener(new java.awt.event.ActionListener() {
+        botoninsertarDato.setText("insertarDato");
+        botoninsertarDato.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonInsertarActionPerformed(evt);
+                botoninsertarDatoActionPerformed(evt);
             }
         });
 
@@ -89,10 +89,10 @@ public class Vista extends javax.swing.JFrame {
             }
         });
 
-        cmdBuscar.setText("Buscar");
-        cmdBuscar.addActionListener(new java.awt.event.ActionListener() {
+        cmdbuscarDato.setText("buscarDato");
+        cmdbuscarDato.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmdBuscarActionPerformed(evt);
+                cmdbuscarDatoActionPerformed(evt);
             }
         });
 
@@ -109,24 +109,24 @@ public class Vista extends javax.swing.JFrame {
         impresion.setRows(5);
         jScrollPane2.setViewportView(impresion);
 
-        btnInOrden.setText("InOrden");
-        btnInOrden.addActionListener(new java.awt.event.ActionListener() {
+        btnrecorridoInOrden.setText("recorridoInOrden");
+        btnrecorridoInOrden.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInOrdenActionPerformed(evt);
+                btnrecorridoInOrdenActionPerformed(evt);
             }
         });
 
-        btnPreOrden.setText("PreOrden");
-        btnPreOrden.addActionListener(new java.awt.event.ActionListener() {
+        btnrecorridoPreOrden.setText("recorridoPreOrden");
+        btnrecorridoPreOrden.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPreOrdenActionPerformed(evt);
+                btnrecorridoPreOrdenActionPerformed(evt);
             }
         });
 
-        btnPosOrden.setText("PosOrden");
-        btnPosOrden.addActionListener(new java.awt.event.ActionListener() {
+        btnrecorridoPostOrden.setText("recorridoPostOrden");
+        btnrecorridoPostOrden.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPosOrdenActionPerformed(evt);
+                btnrecorridoPostOrdenActionPerformed(evt);
             }
         });
 
@@ -165,19 +165,19 @@ public class Vista extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(txtdato, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(botonInsertar)
+                                .addComponent(botoninsertarDato)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cmdBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cmdbuscarDato, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(botonBorrar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(btnNiveles)
                                 .addGap(18, 18, 18)
-                                .addComponent(btnInOrden)
+                                .addComponent(btnrecorridoInOrden)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnPreOrden)
+                                .addComponent(btnrecorridoPreOrden)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnPosOrden)
+                                .addComponent(btnrecorridoPostOrden)
                                 .addGap(18, 18, 18)
                                 .addComponent(cmdDarHojas)))
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -190,13 +190,13 @@ public class Vista extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtdato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonInsertar)
-                    .addComponent(cmdBuscar)
+                    .addComponent(botoninsertarDato)
+                    .addComponent(cmdbuscarDato)
                     .addComponent(botonBorrar)
                     .addComponent(btnNiveles)
-                    .addComponent(btnInOrden)
-                    .addComponent(btnPreOrden)
-                    .addComponent(btnPosOrden)
+                    .addComponent(btnrecorridoInOrden)
+                    .addComponent(btnrecorridoPreOrden)
+                    .addComponent(btnrecorridoPostOrden)
                     .addComponent(cmdDarHojas))
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -210,15 +210,15 @@ public class Vista extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botonInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInsertarActionPerformed
+    private void botoninsertarDatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botoninsertarDatoActionPerformed
 
             int dato = Integer.parseInt(txtdato.getText());
-            if (this.simulador.insertar(dato)) {
+            if (this.simulador.insertarDato(dato)) {
                 complementos();
                 txtdato.setText(null);
             }
 
-    }//GEN-LAST:event_botonInsertarActionPerformed
+    }//GEN-LAST:event_botoninsertarDatoActionPerformed
 
     private void cmdDarHojasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdDarHojasActionPerformed
         String salida = this.simulador.darHojas();
@@ -226,14 +226,14 @@ public class Vista extends javax.swing.JFrame {
         this.impresion.setText(salida);
     }//GEN-LAST:event_cmdDarHojasActionPerformed
 
-    private void cmdBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdBuscarActionPerformed
-        int dato_a_buscar = Integer.parseInt(txtdato.getText());
-        String salida = this.simulador.esta(dato_a_buscar);
+    private void cmdbuscarDatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdbuscarDatoActionPerformed
+        int dato_a_buscarDato = Integer.parseInt(txtdato.getText());
+        String salida = this.simulador.esta(dato_a_buscarDato);
         this.impresion.setText("");
         this.impresion.setText(salida);
         txtdato.setText(null);
 
-    }//GEN-LAST:event_cmdBuscarActionPerformed
+    }//GEN-LAST:event_cmdbuscarDatoActionPerformed
 
     private void botonBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBorrarActionPerformed
             int dato = Integer.parseInt(txtdato.getText());
@@ -246,29 +246,29 @@ public class Vista extends javax.swing.JFrame {
         this.repintarArbol();
     }
     
-    private void btnInOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInOrdenActionPerformed
+    private void btnrecorridoInOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnrecorridoInOrdenActionPerformed
         // TODO add your handling code here:
         String recorrido = null;
-        recorrido = this.simulador.inOrden();
+        recorrido = this.simulador.recorridoInOrden();
         this.impresion.setText("");
         this.impresion.setText(recorrido);
-    }//GEN-LAST:event_btnInOrdenActionPerformed
+    }//GEN-LAST:event_btnrecorridoInOrdenActionPerformed
 
-    private void btnPreOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPreOrdenActionPerformed
+    private void btnrecorridoPreOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnrecorridoPreOrdenActionPerformed
         // TODO add your handling code here:
         String recorrido = null;
-        recorrido = this.simulador.preOrden();
+        recorrido = this.simulador.recorridoPreOrden();
         this.impresion.setText("");
         this.impresion.setText(recorrido);
-    }//GEN-LAST:event_btnPreOrdenActionPerformed
+    }//GEN-LAST:event_btnrecorridoPreOrdenActionPerformed
 
-    private void btnPosOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPosOrdenActionPerformed
+    private void btnrecorridoPostOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnrecorridoPostOrdenActionPerformed
         // TODO add your handling code here:
         String recorrido = null;
-        recorrido = this.simulador.posOrden();
+        recorrido = this.simulador.recorridoPostOrden();
         this.impresion.setText("");
         this.impresion.setText(recorrido);
-    }//GEN-LAST:event_btnPosOrdenActionPerformed
+    }//GEN-LAST:event_btnrecorridoPostOrdenActionPerformed
 
     private void btnNivelesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNivelesActionPerformed
         // TODO add your handling code here:
@@ -334,13 +334,13 @@ public class Vista extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonBorrar;
-    private javax.swing.JButton botonInsertar;
-    private javax.swing.JButton btnInOrden;
+    private javax.swing.JButton botoninsertarDato;
+    private javax.swing.JButton btnrecorridoInOrden;
     private javax.swing.JButton btnNiveles;
-    private javax.swing.JButton btnPosOrden;
-    private javax.swing.JButton btnPreOrden;
+    private javax.swing.JButton btnrecorridoPostOrden;
+    private javax.swing.JButton btnrecorridoPreOrden;
     private javax.swing.JButton btnsalir;
-    private javax.swing.JButton cmdBuscar;
+    private javax.swing.JButton cmdbuscarDato;
     private javax.swing.JButton cmdDarHojas;
     private javax.swing.JTextArea impresion;
     private javax.swing.JDesktopPane jDesktopPane1;

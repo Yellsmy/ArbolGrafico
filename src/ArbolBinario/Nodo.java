@@ -31,12 +31,12 @@ public class Nodo {
     
 //metodos get sirven para retornar el valor del dato izquierdo
 //asginado por el metodo set 
-    public Nodo getIzq() {
+    public Nodo getizq() {
         return izq;
     }
     
 //metodo set sirve para asignar y modificar el valor del dato izquierdo 
-    public void setIzq(Nodo izq) {// recibe el valor del puntero izquierdo
+    public void setizq(Nodo izq) {// recibe el valor del puntero izquierdo
         this.izq = izq;//asignacion del valor 
     }
     
