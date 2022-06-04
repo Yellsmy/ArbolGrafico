@@ -13,15 +13,15 @@ import javax.swing.JLayeredPane;
  *
  * Realizado por Yellsmy Wilson Eddison Roberto
  */
-public class VistaArbolBinario extends javax.swing.JFrame {
+public class Vista extends javax.swing.JFrame {
     
   
-    private SimuladorArbolBinario simulador = new SimuladorArbolBinario();
+    private Simulador simulador = new Simulador();
 
     /**
      * Creando nuevo formulario 
      */
-    public VistaArbolBinario() {
+    public Vista() {
         initComponents();
         setLocationRelativeTo(null);
     }
@@ -312,21 +312,23 @@ public class VistaArbolBinario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VistaArbolBinario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VistaArbolBinario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VistaArbolBinario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VistaArbolBinario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VistaArbolBinario().setVisible(true);
+                new Vista().setVisible(true);
             }
         });
     }

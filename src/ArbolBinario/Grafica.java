@@ -9,7 +9,7 @@ import java.awt.*;
 import java.util.*;
 import javax.swing.*;
 
-public class ArbolExpresionGrafico extends JPanel 
+public class Grafica extends JPanel 
 {
     private Arbol miArbol;
     private HashMap posicionNodos = null;
@@ -27,7 +27,7 @@ public class ArbolExpresionGrafico extends JPanel
      * parametro miExpresion: dato de tipo ArbolExpresion que contiene el Arbol a
      * dibujar.
      */
-    public ArbolExpresionGrafico(Arbol miArbol) 
+    public Grafica(Arbol miArbol) 
     {
           this.miArbol = miArbol;
           this.setBackground(Color.WHITE); // Se le asigna color blanco al panel

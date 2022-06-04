@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import javax.swing.JPanel;
 
 //Instancia de metodos del ARBOL.java 
-public class SimuladorArbolBinario {
+public class Simulador {
     //declaramos una variable arbol que nos da acceso a los metodos 
     Arbol miArbol = new Arbol();
 
